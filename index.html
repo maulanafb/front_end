@@ -15,7 +15,7 @@
   <body>
     <!-- navbar  -->
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container">
         <a class="navbar-brand fs-4 fw-bold" href="#">MaulanaFb</a>
         <button
@@ -51,19 +51,29 @@
     <!-- end navbar -->
 
     <section id="home" class="home container">
-      <div class="row d-flex align-items-center">
-        <div class="col-8">
+      <div
+        class="row d-flex align-items-center flex-md-row flex-column-reverse"
+      >
+        <div class="col-12 col-md-8">
           <h3 class="fw-semibold">Hi! I Am</h3>
           <h1 class="fw-bold">MaulanaFb</h1>
           <p>I am Software Engineer based in Indonesia</p>
           <a class="btn button" href="images/potrait.png" download>Resume</a>
         </div>
-        <div class="col-4"><img src="images/potrait.png" alt="" /></div>
+        <div
+          class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center"
+        >
+          <img src="images/potrait.png" alt="" />
+        </div>
       </div>
-      <div class="w-100 arrow d-flex align-items-center flex-column mt-2">
-        <a class="text-decoration-none text-dark" href="#about">More Info</a>
+
+      <a
+        href="#about"
+        class="text-decoration-none w-100 arrow d-flex align-items-center flex-column mt-2"
+      >
+        <div class="text-dark">More Info</div>
         <img id="arrow" class="mt-2" src="images/arrow.svg" alt="" />
-      </div>
+      </a>
     </section>
 
     <!-- aBOUT -->
@@ -153,6 +163,58 @@
           <div class="work-img-item" id="work-3">
             <img src="images/work-3.png" alt="" />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <div class="row d-flex align-items-center gap-4">
+        <div class="col-12 col-lg-6">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
+            neque architecto delectus cupiditate perspiciatis porro obcaecati
+            adipisci non soluta, quidem repudiandae est! Quas, recusandae. Quia
+            quidem quos, veniam dignissimos nihil quas vero laboriosam ad eius
+            exercitationem temporibus. Magnam rem rerum libero ea, animi,
+            cumque, facere aut nulla aspernatur repellat dolore?
+          </p>
+          <div class="row">
+            <div class="col d-flex align-items-center">
+              <img class="w-25" src="images/Facebook.svg" alt="" />
+              <p class="mb-0 ms-2">@MaulanaFb</p>
+            </div>
+
+            <div class="col d-flex align-items-center">
+              <img class="w-25" src="images/Instagram.svg" alt="" />
+              <p class="mb-0 ms-2">@MaulanaFb</p>
+            </div>
+            <div class="col d-flex align-items-center">
+              <img class="w-25" src="images/Twitter.svg" alt="" />
+              <p class="mb-0 ms-2">@MaulanaFb</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <form class="contact-form" onsubmit="onFormSubmit(event)">
+            <div class="mb-3">
+              <label for="inp_email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="inp_email" />
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="inp_subject" class="form-label">Subject</label>
+              <input type="password" class="form-control" id="inp_subject" />
+            </div>
+            <div class="mb-3">
+              <label for="inp_message" class="form-label">Message</label>
+              <input type="password" class="form-control" id="inp_message" />
+            </div>
+            <div class="mt-5 d-flex justify-content-center">
+              <button type="submit" class="btn button">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
